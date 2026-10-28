@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marvin — Frontend developer in the making</title>
+<meta name="description" content="Marvin, a frontend development student in Nigeria.">
+<style>
+  :root {
+    --cream: #f6f0e4;
+    --ink: #1c2a24;
+    --muted: #4d5a54;
+    --teal: #176b65;
+    --teal-soft: #d0e8e2;
+    --line: #ddd2bd;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .hero {
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    display: grid;
+    gap: 3rem;
+  }
+  .eyebrow {
+    font-size: .85rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: .2em; color: var(--teal); margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(4.5rem, 14vw, 8rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  .subtitle {
+    font-family: Georgia, serif; font-style: italic;
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    color: var(--teal); margin-top: 1.25rem;
+  }
+  .desc {
+    margin-top: 1.5rem; max-width: 36rem;
+    /* Manual improvement after export: more readable paragraph spacing. */
+    font-size: 1.125rem; line-height: 1.75; color: var(--muted);
+  }
+  .passions { list-style: none; display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+  .passions li { border: 1px solid var(--line); border-radius: 999px; padding: .5rem 1rem; font-size: .9rem; font-weight: 500; }
+  .btn {
+    display: inline-flex; gap: .5rem; align-items: center;
+    margin-top: 2.5rem; padding: 1rem 1.75rem; border-radius: 999px;
+    background: var(--teal); color: var(--cream);
+    text-decoration: none; font-weight: 600;
+    transition: transform .2s, opacity .2s;
+  }
+  .btn:hover { transform: translateY(-2px); opacity: .92; }
+  .btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
+  .art { position: relative; width: 15rem; aspect-ratio: 1; margin: 0 auto; }
+  .ring { position: absolute; border: 1.5px solid var(--teal); border-radius: 50%; }
+  .r1 { inset: 0; }
+  .r2 { inset: 2rem; opacity: .5; }
+  .core {
+    position: absolute; inset: 4rem; border-radius: 50%;
+    background: var(--teal-soft); display: flex; align-items: center; justify-content: center;
+    font-family: Georgia, serif; font-size: 4rem; font-weight: 600; color: var(--teal);
+  }
+  .dot { position: absolute; border-radius: 50%; }
+  .d1 { width: 1.25rem; height: 1.25rem; right: 1rem; top: 1.5rem; background: var(--teal); }
+  .d2 { width: .75rem; height: .75rem; left: .5rem; bottom: 2rem; background: var(--ink); }
+  @media (min-width: 768px) {
+    .hero { grid-template-columns: 1.5fr 1fr; align-items: center; padding: 6rem 1.5rem; }
+    .art { width: 100%; max-width: 21rem; }
+    .core { font-size: 5rem; }
+  }
+</style>
+</head>
+<body>
+<main class="hero">
+  <div>
+    <p class="eyebrow">Frontend student · Nigeria</p>
+    <h1>Marvin</h1>
+    <p class="subtitle">Frontend developer in the making</p>
+    <p class="desc">I enjoy turning ideas into clean, responsive websites. My goal is to build accessible, useful interfaces and grow into a full-stack developer.</p>
+    <ul class="passions" aria-label="Passions">
+      <li>Coding</li><li>Creative design</li><li>Solving problems</li>
+    </ul>
+    <a class="btn" href="https://github.com/Marvericklnk?tab=repositories" target="_blank" rel="noopener noreferrer">View My Projects <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="art" aria-hidden="true">
+    <div class="ring r1"></div><div class="ring r2"></div>
+    <div class="core">M</div>
+    <div class="dot d1"></div><div class="dot d2"></div>
+  </div>
+</main>
+</body>
+</html>
+
